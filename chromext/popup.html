@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h3>AI Chat Assistant</h3>
+    </header>
+    <div id="chatWindow" class="chat-window" aria-live="polite">
+      <!-- Chat messages will dynamically appear here -->
+    </div>
+    <div class="input-group">
+      <input type="text" id="userInput" placeholder="Type your message..." aria-label="User input">
+      <button id="speakBtn" aria-label="Speak">🔊</button >
+      <button id="sendBtn" aria-label="Send">➤</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  width: 500px;
+  height: 600px;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a); /* Dark futuristic background */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(135deg, #121212, #1a1a1a); /* Slightly lighter background */
+}
+
+/* Header */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: linear-gradient(90deg, #00ffff, #0078ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Chat Window */
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.chat-window .message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.chat-window .message.user {
+  justify-content: flex-end;
+}
+
+.chat-window .message.user .bubble {
+  background: linear-gradient(135deg, #0078ff, #00ffff); /* Neon gradient for user messages */
+  color: #fff;
+  align-self: flex-end;
+  box-shadow: 0 0 15px rgba(0, 120, 255, 0.8);
+}
+
+.chat-window .message.ai .bubble {
+  background: linear-gradient(135deg, #333, #555); /* Metallic gradient for AI messages */
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* System Message */
+.message.system .bubble {
+  background: linear-gradient(135deg, #444, #555); /* Neutral gradient for system messages */
+  color: #ccc;
+  font-style: italic;
+  text-align: center;
+  box-shadow: none;
+}
+
+.chat-window .bubble {
+  max-width: 70%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  border-top: 1px solid #333;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #121212, #1a1a1a);
+  color: #fff;
+  box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Disabled Input Field */
+input:disabled {
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  color: #666;
+  cursor: not-allowed;
+}
+
+button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #0078ff, #00ffff);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 120, 255, 0.8);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #005bb5, #00cccc);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+}
+
+button:active {
+  background: linear-gradient(135deg, #003f7f, #009999);
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Disabled Button */
+button:disabled {
+  background: linear-gradient(135deg, #555, #666);
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Speak Button Active State */
+button#speakBtn.active {
+  background: linear-gradient(135deg, #ff4d4d, #ff9999); /* Red gradient for active state */
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.8);
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* Dialog */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5);
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+dialog p {
+  font-size: 1rem;
+  color: #00ffff;
+  line-height: 1.5;
+  margin: 0;
+}
+
+dialog .dialog-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+dialog button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #0078ff, #00ffff);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+dialog button:hover {
+  background: linear-gradient(135deg, #005bb5, #00cccc);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
