@@ -28,7 +28,7 @@ def google_tts():
 
         # Initialize the Google Cloud Text-to-Speech client
         client = texttospeech.TextToSpeechClient(
-            credentials=service_account.Credentials.from_service_account_file("/Users/allan/Documents/projects/realtime-dialog-extension/fulcrum-101-613b53a51a02.json")
+            credentials=service_account.Credentials.from_service_account_file("tts-service-account.json")
         )
 
         # Construct the TTS request
